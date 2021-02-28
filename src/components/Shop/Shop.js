@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import fakeData from "../../fakeData";
+import Product from '../Product/Product';
 import "./Shop.css"
 
 const Shop = () => {
@@ -8,11 +9,9 @@ const Shop = () => {
     return (
         <div className="shop-container">
             <div className="product-container">
-                <ul>
                     {
-                        product.map(products => <li>{products.name}</li>)
+                        product.map(pd => <Product product={pd}></Product>)
                     }
-                </ul>
             </div>
             <div className="cart-container">
                 <h3>this is cart</h3>
